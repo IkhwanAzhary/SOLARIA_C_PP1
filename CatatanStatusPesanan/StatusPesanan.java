@@ -1,5 +1,3 @@
-package tubes;
-
 public class StatusPesanan {
 	private String idPesanan;
     private String status;
