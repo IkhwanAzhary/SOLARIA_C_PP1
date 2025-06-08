@@ -4,7 +4,7 @@ public class OrderNode {
     public Order order;
     public OrderNode next;
 
-    public OrderNNode (Order order) {
+    public OrderNode (Order order) {
         this.order = order;
         this.next = null;
     }
