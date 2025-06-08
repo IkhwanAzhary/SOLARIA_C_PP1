@@ -27,7 +27,7 @@ public class Order {
 		this.status = status;
 	}
 
-	@Override
+	// @Override
 	public String toString() {
 		return "Pesanan #" + orderId + " - " + customerName + " [" + status + "]";
 	}
