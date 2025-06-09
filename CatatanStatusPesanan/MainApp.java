@@ -18,6 +18,7 @@ public class MainApp {
             System.out.println("1. Lihat Semua Pesanan");
             System.out.println("2. Ubah Status Pesanan");
             System.out.println("3. Tambah Pesanan Baru");
+            System.out.println("4. Hapus Pesanan");
             System.out.println("0. Keluar");
             System.out.print("Pilih menu: ");
             pilihan = scanner.nextInt();
@@ -41,6 +42,17 @@ public class MainApp {
                     String nama = scanner.nextLine();
                     daftarPesanan.tambahPesanan(new Order(idBaru, nama));
                     System.out.println("Pesanan berhasil ditambahkan.");
+                    break;
+                case 4:
+                    System.out.print("Masukkan ID Pesanan yang ingin dihapus: ");
+                    int deleteId = scanner.nextInt();
+                    scanner.nextLine(); // konsumsi newline
+                    boolean deleted = daftarPesanan.deleteOrder(deleteId);
+                    if (deleted) {
+                        System.out.println("Pesanan berhasil dihapus.");
+                    } else {
+                        System.out.println("Pesanan dengan ID tersebut tidak ditemukan.");
+                    }
                     break;
                 case 0:
                     System.out.println("Terima kasih!");

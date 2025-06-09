@@ -34,6 +34,28 @@ public class OrderList {
      System.out.println("Pesanan dengan ID #" + orderId + " tidak ditemukan.");
  }
 
+public boolean deleteOrder(int orderId) {
+    if (head == null) return false;
+
+    if (head.order.getOrderId() == orderId) {
+        head = head.next;
+        return true;
+    }
+
+    OrderNode current = head;
+    while (current.next != null) {
+        if (current.next.order.getOrderId() == orderId) {
+            current.next = current.next.next;
+            return true;
+        }
+        current = current.next;
+    }
+
+    return false;
+}
+
+
+
  public void tampilkanPesanan() {
      OrderNode current = head;
      while (current != null) {

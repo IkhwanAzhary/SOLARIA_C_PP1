@@ -2,7 +2,7 @@ package CatatanStatusPesanan;
 
 public class Order {
 	private int orderId;
-	private String customerName;
+	private String customerName ;
 	private OrderStatus status;
 
 	public Order(int orderId, String customerName) {
